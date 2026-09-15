@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   generator: 'v0.app',
   icons: {
     icon: '/images/logofavicon.png',
-  },ps es de 
+  },
 }
 
 export const viewport: Viewport = {

@@ -55,7 +55,7 @@ type Plan = {
 }
 
 const plans: Plan[] = [
-  { id: 'internet-200', category: 'internet', speed: 200, speedUnit: 'Mbps', regularPrice: 49, promotionalPrice: 24.5, promotionMonths: 2, tvIncluded: false },
+  { id: 'internet-200', category: 'internet', speed: 200, speedUnit: 'Mbps', regularPrice: 250, promotionalPrice: null, promotionMonths: null, tvIncluded: false },
   { id: 'internet-600', category: 'internet', speed: 600, speedUnit: 'Mbps', regularPrice: 69, promotionalPrice: 34.5, promotionMonths: 2, tvIncluded: false },
   { id: 'duo-300', category: 'duo', speed: 300, speedUnit: 'Mbps', regularPrice: 59, promotionalPrice: 29.5, promotionMonths: 2, tvIncluded: true, tvBox: true },
   { id: 'duo-500', category: 'duo', speed: 500, speedUnit: 'Mbps', regularPrice: 75, promotionalPrice: 37.5, promotionMonths: 2, tvIncluded: true, tvBox: true },

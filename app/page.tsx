@@ -55,10 +55,10 @@ type Plan = {
 }
 
 const plans: Plan[] = [
-  { id: 'internet-200', category: 'internet', speed: 200, speedUnit: 'Mbps', regularPrice: 250, promotionalPrice: null, promotionMonths: null, tvIncluded: false },
-  { id: 'internet-600', category: 'internet', speed: 600, speedUnit: 'Mbps', regularPrice: 69, promotionalPrice: 34.5, promotionMonths: 2, tvIncluded: false },
+  { id: 'internet-250', category: 'internet', speed: 250, speedUnit: 'Mbps', regularPrice: 49, promotionalPrice: 24.5, promotionMonths: 2, tvIncluded: false },
   { id: 'duo-300', category: 'duo', speed: 300, speedUnit: 'Mbps', regularPrice: 59, promotionalPrice: 29.5, promotionMonths: 2, tvIncluded: true, tvBox: true },
   { id: 'duo-500', category: 'duo', speed: 500, speedUnit: 'Mbps', regularPrice: 75, promotionalPrice: 37.5, promotionMonths: 2, tvIncluded: true, tvBox: true },
+  { id: 'internet-600', category: 'internet', speed: 600, speedUnit: 'Mbps', regularPrice: 69, promotionalPrice: 34.5, promotionMonths: 2, tvIncluded: false },
   { id: 'duo-1000', category: 'duo', speed: 1000, speedUnit: 'Mbps', regularPrice: 99, promotionalPrice: 49.5, promotionMonths: 1, tvIncluded: true, tvBox: true, meshRepeater: true },
 ]
 
@@ -113,9 +113,9 @@ function Logo({ light = false }: { light?: boolean }) {
 }
 
 function HeroPlanSelector() {
-  const speedOptions = [200, 300, 500, 600, 1000]
+  const speedOptions = [250, 300, 500, 600, 1000]
   const [speed, setSpeed] = useState(300)
-  const plan = plans.find((item) => item.speed === speed && (speed === 200 || speed === 600 ? item.category === 'internet' : item.category === 'duo')) ?? plans[0]
+  const plan = plans.find((item) => item.speed === speed && (speed === 250 || speed === 600 ? item.category === 'internet' : item.category === 'duo')) ?? plans[0]
   const promotionLabel = plan.promotionMonths === 1 ? 'mes' : 'meses'
   const isTv = plan.tvIncluded
   const benefits = isTv ? ['Internet 100% fibra óptica', ...(speed >= 500 ? ['+100 canales TV'] : ['TV entretenimiento']), 'L1 Max', ...(plan.tvBox ? ['1 TV Box'] : []), ...(plan.meshRepeater ? ['1 repetidor Mesh'] : [])] : ['Internet 100% fibra óptica', 'WiFi 6', 'Internet ilimitado']
